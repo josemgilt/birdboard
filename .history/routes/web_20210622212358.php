@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/projects', function ()
+Route::get_browser('/projects', function ()
 {
     $projects = App\Models\Project::all();
 

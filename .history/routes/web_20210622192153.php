@@ -19,25 +19,13 @@ Route::get('/', function () {
 });
 
 
-Route::get('/projects', function ()
-{
-    $projects = App\Models\Project::all();
-
-
-    return view('projects.index', compact('projects'));
-
-});
-
-
-
-
 Route::post('/projects', function (){
 
     // validate
 
     //persist
 
-    App\Models\Project::create(request(['title', 'description']));
+    Project::create(request(['title', 'description']));
 
 
 });
