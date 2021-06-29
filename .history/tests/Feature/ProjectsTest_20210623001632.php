@@ -6,7 +6,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-
 class ProjectsTest extends TestCase
 {
     
@@ -38,28 +37,14 @@ class ProjectsTest extends TestCase
 
   }
 
-  /** @test */
+/** @test */
 
-  public function a_project_requires_a_title()
+public function a_project_requires_a_title()
+{
 
-  {
+    $this->post('/project', [])->assertSessionHasErrors('title');
 
-    $attributes = factory('App\Models\Project')->raw(['title' => '']);
 
-    $this->post('/projects', $attributes)->assertSessionHasErrors('title');
-
-  }
-
-    /** @test */
-
-    public function a_project_requires_a_description()
-    {
-
-      $attributes = factory('App\Models\Project')->raw(['description' => '']);
-  
-      $this->post('/projects', $attributes)->assertSessionHasErrors('description');
-  
-    }
-  
+}
 
 }

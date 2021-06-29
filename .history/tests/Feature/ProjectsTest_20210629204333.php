@@ -54,10 +54,8 @@ class ProjectsTest extends TestCase
 
     public function a_project_requires_a_description()
     {
-
-      $attributes = factory('App\Models\Project')->raw(['description' => '']);
   
-      $this->post('/projects', $attributes)->assertSessionHasErrors('description');
+      $this->post('/projects', [])->assertSessionHasErrors('description');
   
     }
   
