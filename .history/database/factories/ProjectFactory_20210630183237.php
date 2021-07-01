@@ -4,7 +4,6 @@ namespace Database\Factories;
 
 use App\Models\Project;
 use Illuminate\Database\Eloquent\Factories\Factory;
-//use Illuminate\Support\Str;
 
 class ProjectFactory extends Factory
 {
@@ -13,7 +12,7 @@ class ProjectFactory extends Factory
      *
      * @var string
      */
-    protected $model = Project::class;
+    protected $factory = Project::class;
 
     /**
      * Define the model's default state.
@@ -23,8 +22,9 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->sentence(),
-            'description' => $this->faker->text(),
+
+            'title'=>$this->faker->sentence(),
+            'description'=>$this->faker->sentence(),
         ];
     }
 }

@@ -47,15 +47,12 @@ class ProjectsTest extends TestCase
 
   {
 
-      $this->withoutExceptionHandling();
-
       $project = Project::factory()->create();
 
 
-      $this->get($project->path())
+      $this->get('/projects/' . $project->id)
 
           ->assertSee($project->title)
-
           ->assertSee($project->description);
   }
 

@@ -17,7 +17,7 @@
 
           <li>
           
-              <a href="{{ $project->path() }}">{{ $project->title }} </a>
+              <a> href="{{ $project->path() }}"{{ $project->title }}</a>
               
           </li>
         

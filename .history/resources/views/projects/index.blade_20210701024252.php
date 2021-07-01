@@ -17,7 +17,7 @@
 
           <li>
           
-              <a href="{{ $project->path() }}">{{ $project->title }} </a>
+              <a> href="{{ $project->path() }}">{{ $project->title }}</a>
               
           </li>
         
@@ -25,7 +25,7 @@
 
           <l1>No projects yet</l1>
 
-      @endforelse
+      @endfoelse
 
   </ul>
   

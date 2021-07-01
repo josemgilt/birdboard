@@ -12,14 +12,12 @@ class Project extends Model
 
     protected $guarded = [];
 
+    
 
-    public function path()
+public function test_models_can_be_instantiated()
+{
+    $Project = Project::factory()->make();
 
-    {
-
-        return "/projects/{$this->id}";
-
-    }
-
-
+    // Use model in tests...
+}
 }

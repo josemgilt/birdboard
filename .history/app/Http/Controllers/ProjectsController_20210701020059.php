@@ -18,12 +18,13 @@ class ProjectsController extends Controller
 
     }
 
-    public function show(Project $project)
+    public function show()
 
     {
+        $project = Project::findOrFail(request('project'));
 
 
-        return view('projects.show', compact('project'));
+        return view('proje')
 
 
     }
@@ -35,10 +36,7 @@ class ProjectsController extends Controller
 
     //validate
         
-    request()->validate([
-        
-        'title' => 'required', 
-        'description' => 'required']);
+    request()->validate(['title' => 'required', 'description' => 'required']);
 
     //persist
 

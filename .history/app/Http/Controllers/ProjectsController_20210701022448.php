@@ -35,10 +35,7 @@ class ProjectsController extends Controller
 
     //validate
         
-    request()->validate([
-        
-        'title' => 'required', 
-        'description' => 'required']);
+    request()->validate(['title' => 'required', 'description' => 'required']);
 
     //persist
 
